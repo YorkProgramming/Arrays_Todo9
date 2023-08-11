@@ -115,3 +115,44 @@ console.log(timeToEnglish(30));
 //We return the time.
 
 //#########################################################################################################
+
+//3.
+//Missing Value
+
+/* You are given an array of length N that contains, in no particular order, 
+integers from 0 to N. One integer value is missing. 
+Quickly determine and return the missing value. 
+Given ([3,0,1]), return 2.
+
+Second: now the lowest value can now be any integer (including negatives), 
+instead of always being 0. 
+Given ([2,-4,0,-3,-2,1]) 
+return -1. 
+
+Given ([5,2,7,8,4,9,3]), 
+return 6. */
+
+function missingValue(arr){
+    var missing = 0;
+
+    for(var i = 0; i < arr.length; i++){
+        if(arr[i] != i){
+            missing = i;
+            break;
+        }
+    }
+
+    return missing;
+}
+
+//Example:
+console.log(missingValue([3,0,1]));
+
+//We create a missing variable.
+//We loop through the array.
+//We check if the array value is not equal to the index.
+//If it is not, we set the missing variable to the index.
+//We break out of the loop.
+//We return the missing variable.
+
+//#########################################################################################################
